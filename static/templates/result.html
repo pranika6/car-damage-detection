@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5 text-center">
+        <h1>Prediction Result</h1>
+        
+        <img src="{{ url_for('static', filename='uploads/' + image) }}" 
+             alt="Uploaded Car Image" class="img-fluid mb-3" style="max-width:400px;">
+        
+        <h3>Damage Type: <span class="text-danger">{{ damage_type }}</span></h3>
+        <h4>Confidence: {{ confidence }}</h4>
+        
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Try Another Image</a>
+    </div>
+</body>
+</html>
